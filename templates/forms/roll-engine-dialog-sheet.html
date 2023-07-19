@@ -86,7 +86,8 @@
           {{/select}}
         </select><br>
         <hr class="hr-roll-engine">
-
+        
+        {{#if this.useAttackModifiers}}
         <label class="roll-engine-heading"><b>{{localize "CYPHERSYSTEM.AttackModifiers"}}</b></label><br>
         <label class="roll-engine-label">{{localize "CYPHERSYSTEM.Damage"}}:</label>
         <input name="damage" id="damage" type="number" value="{{this.damage}}" class="roll-engine-input" /><br>
@@ -105,7 +106,8 @@
         <label class="roll-engine-label">{{localize "CYPHERSYSTEM.DamageLevelEffort"}}:</label>
         <input name="damagePerLOE" id="damagePerLOE" type="number" value="{{this.damagePerLOE}}" class="roll-engine-input" /><br>
         <hr class="hr-roll-engine">
-
+        {{/if}}
+        
         <label class="roll-engine-heading"><b>{{localize "CYPHERSYSTEM.AdditionalModifiers"}}</b></label><br>
         <label class="roll-engine-label">{{localize "CYPHERSYSTEM.DifficultyModifier"}}:</label>
         <select class="roll-engine-select-eased-hindered" name="easedOrHindered" id="easedOrHindered" class="dialog-select">
