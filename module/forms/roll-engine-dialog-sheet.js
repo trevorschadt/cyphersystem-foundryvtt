@@ -31,7 +31,7 @@ export class RollEngineDialogSheet extends FormApplication {
     if (!data.title) data.title = game.i18n.localize("CYPHERSYSTEM.StatRoll");
 
     data.useGlobalDifficulty = game.settings.get("cyphersystem", "rollDifficulty");
-
+    data.useAttackModifiers = actor.items.get(data.itemID).type == 'attack';
     data.effortValue = actor.system.basic.effort;
 
     data.mightValue = (data.teen) ? actor.system.teen.pools.might.value : actor.system.pools.might.value;
